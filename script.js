@@ -17,3 +17,10 @@ for (let i = 0; i < showModals.length; i++)
 
 closeModal.addEventListener('click', clickCloseModal);
 overlayModal.addEventListener('click', clickCloseModal);
+document.addEventListener('keydown', function (event) {
+  //console is just for illustration
+  console.log(event);
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    clickCloseModal();
+  }
+});
